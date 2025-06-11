@@ -10,12 +10,11 @@
 <body>
     <header class="hero">
         <div class="terminal-text">
-            <p>> INICIANDO RASTREAMENTO...</p>
-            <p>> COLETANDO DADOS SIGILOSOS...</p>
-            <p>> ACESSO CONCEDIDO</p>
+            <p id="line1">> INICIANDO SISTEMA...</p>
+            <p id="line2">> RASTREANDO...</p>
+            <p id="line3">> ACESSO RESTRITO</p>
         </div>
         <a href="#" class="cta-button" onclick="openModal()">ACESSO EXCLUSIVO JURISTAS/FACTORY</a>
-        <a href="#catalogo" class="cta-button">CATÁLOGO COMPLETO</a>
     </header>
 
     <section class="sobre">
@@ -23,16 +22,32 @@
         <p>Unidade de inteligência digital e auditoria mobile. Atuamos com rastreamento autorizado, investigação profissional e proteção de dados sensíveis.</p>
     </section>
 
-    <section id="catalogo" class="servicos">
-        <h2>Catálogo de Serviços</h2>
-        <ul>
-            <li><strong>💔 Casos Conjugais:</strong> Investigação de traições, abandono e comportamento suspeito.</li>
-            <li><strong>📍 Localização:</strong> Rastreamento digital e análise de rota com autorização.</li>
-            <li><strong>🕵️‍♂️ Golpistas:</strong> Identificação de contatos e perfis suspeitos.</li>
-            <li><strong>🧽 Remoção de Dados:</strong> Exclusão de menções e proteção de imagem digital.</li>
-            <li><strong>🔍 Dados Vazados:</strong> Monitoramento de vazamentos e alertas em tempo real.</li>
-            <li><strong>📡 Controle Mobile:</strong> App exclusivo, oculto e antifraude para rastreio autorizado.</li>
-        </ul>
+    <section class="servicos">
+        <h2>📁 Catálogo de Serviços</h2>
+        <details>
+            <summary>💔 Casos Conjugais</summary>
+            <p>Investigação de traições, abandono e comportamento suspeito.</p>
+        </details>
+        <details>
+            <summary>📍 Localização</summary>
+            <p>Rastreamento digital e análise de rota com autorização.</p>
+        </details>
+        <details>
+            <summary>🕵️‍♂️ Golpistas</summary>
+            <p>Identificação de contatos e perfis suspeitos.</p>
+        </details>
+        <details>
+            <summary>🧽 Remoção de Dados</summary>
+            <p>Exclusão de menções e proteção de imagem digital.</p>
+        </details>
+        <details>
+            <summary>🔍 Dados Vazados</summary>
+            <p>Monitoramento de vazamentos e alertas em tempo real.</p>
+        </details>
+        <details>
+            <summary>📡 Controle Mobile</summary>
+            <p>App exclusivo, oculto e antifraude para rastreio autorizado.</p>
+        </details>
     </section>
 
     <footer>
@@ -49,6 +64,28 @@
     </div>
 
     <script>
+    let i = 0;
+    const lines = [
+        "> INICIANDO SISTEMA...",
+        "> RASTREANDO...",
+        "> ACESSO RESTRITO"
+    ];
+    function typeLine(id, text, delay = 50) {
+        let i = 0;
+        const element = document.getElementById(id);
+        element.innerText = "";
+        const interval = setInterval(() => {
+            element.innerText += text[i];
+            i++;
+            if (i >= text.length) clearInterval(interval);
+        }, delay);
+    }
+    window.onload = () => {
+        typeLine("line1", lines[0]);
+        setTimeout(() => typeLine("line2", lines[1]), 1800);
+        setTimeout(() => typeLine("line3", lines[2]), 3600);
+    };
+
     function openModal() {
         document.getElementById("modal").style.display = "block";
     }
