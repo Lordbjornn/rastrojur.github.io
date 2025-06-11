@@ -1,97 +1,36 @@
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>RastroJur - Inteligência e Auditoria Mobile</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>RastroJur - Inteligência Digital</title>
+  <style>
+    body {
+      margin: 0;
+      background: url('bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #0f0;
+      font-family: monospace;
+    }
+    .terminal {
+      padding: 30px;
+      font-size: 18px;
+      animation: typing 4s steps(40, end) infinite;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+  </style>
 </head>
 <body>
-    <header class="hero">
-        <div class="terminal-text">
-            <p id="line1">> INICIANDO SISTEMA...</p>
-            <p id="line2">> RASTREANDO...</p>
-            <p id="line3">> ACESSO RESTRITO</p>
-        </div>
-        <a href="#" class="cta-button" onclick="openModal()">ACESSO EXCLUSIVO JURISTAS/FACTORY</a>
-    </header>
-
-    <section class="sobre">
-        <h2>Sobre a RastroJur</h2>
-        <p>Unidade de inteligência digital e auditoria mobile. Atuamos com rastreamento autorizado, investigação profissional e proteção de dados sensíveis.</p>
-    </section>
-
-    <section class="servicos">
-        <h2>📁 Catálogo de Serviços</h2>
-        <details>
-            <summary>💔 Casos Conjugais</summary>
-            <p>Investigação de traições, abandono e comportamento suspeito.</p>
-        </details>
-        <details>
-            <summary>📍 Localização</summary>
-            <p>Rastreamento digital e análise de rota com autorização.</p>
-        </details>
-        <details>
-            <summary>🕵️‍♂️ Golpistas</summary>
-            <p>Identificação de contatos e perfis suspeitos.</p>
-        </details>
-        <details>
-            <summary>🧽 Remoção de Dados</summary>
-            <p>Exclusão de menções e proteção de imagem digital.</p>
-        </details>
-        <details>
-            <summary>🔍 Dados Vazados</summary>
-            <p>Monitoramento de vazamentos e alertas em tempo real.</p>
-        </details>
-        <details>
-            <summary>📡 Controle Mobile</summary>
-            <p>App exclusivo, oculto e antifraude para rastreio autorizado.</p>
-        </details>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 RastroJur - Unidade de Inteligência</p>
-    </footer>
-
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <h3>🔒 Acesso Restrito</h3>
-            <p>Área exclusiva para juristas, advogados e integrantes da Factory. Deseja prosseguir com contato técnico autorizado?</p>
-            <a href="https://wa.me/5519990187278" target="_blank" class="cta-button">Falar com especialista</a>
-            <button onclick="closeModal()" class="cta-button">Fechar</button>
-        </div>
-    </div>
-
-    <script>
-    let i = 0;
-    const lines = [
-        "> INICIANDO SISTEMA...",
-        "> RASTREANDO...",
-        "> ACESSO RESTRITO"
-    ];
-    function typeLine(id, text, delay = 50) {
-        let i = 0;
-        const element = document.getElementById(id);
-        element.innerText = "";
-        const interval = setInterval(() => {
-            element.innerText += text[i];
-            i++;
-            if (i >= text.length) clearInterval(interval);
-        }, delay);
-    }
-    window.onload = () => {
-        typeLine("line1", lines[0]);
-        setTimeout(() => typeLine("line2", lines[1]), 1800);
-        setTimeout(() => typeLine("line3", lines[2]), 3600);
-    };
-
-    function openModal() {
-        document.getElementById("modal").style.display = "block";
-    }
-    function closeModal() {
-        document.getElementById("modal").style.display = "none";
-    }
-    </script>
+  <div class="terminal">Carregando dados de rastreamento...</div>
+  <script>
+    const audio = new Audio('type.mp3');
+    setInterval(() => { audio.play(); }, 4000);
+  </script>
 </body>
 </html>
