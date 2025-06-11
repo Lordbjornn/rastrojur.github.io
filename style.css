@@ -1,1 +1,15 @@
-/* CSS estilizado e restaurado será inserido aqui */
+
+body {
+  background-color: #0d0d0d;
+  color: #00ffcc;
+  font-family: monospace;
+  text-align: center;
+  padding-top: 20vh;
+}
+.loading {
+  font-size: 24px;
+  animation: blink 1s step-start infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
