@@ -3,8 +3,8 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RastroJur - Inteligência e Auditoria Mobile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,29 +14,47 @@
             <p>> COLETANDO DADOS SIGILOSOS...</p>
             <p>> ACESSO CONCEDIDO</p>
         </div>
-        <a href="https://wa.me/5519990187278" class="cta-button">ACESSAR TERMINAL</a>
+        <a href="#" class="cta-button" onclick="openModal()">ACESSO EXCLUSIVO JURISTAS/FACTORY</a>
+        <a href="#catalogo" class="cta-button">CATÁLOGO COMPLETO</a>
     </header>
 
     <section class="sobre">
         <h2>Sobre a RastroJur</h2>
-        <p>Somos uma unidade de inteligência digital especializada em auditoria mobile, investigação legal e coleta de dados sigilosos com base técnica e autorização.</p>
+        <p>Unidade de inteligência digital e auditoria mobile. Atuamos com rastreamento autorizado, investigação profissional e proteção de dados sensíveis.</p>
     </section>
 
-    <section class="servicos">
-        <h2>Serviços</h2>
+    <section id="catalogo" class="servicos">
+        <h2>Catálogo de Serviços</h2>
         <ul>
-            <li>🧠 Investigação para Juristas</li>
-            <li>💔 Casos Conjugais</li>
-            <li>📍 Localização de Pessoas</li>
-            <li>🕵️‍♂️ Identificação de Golpistas</li>
-            <li>🧽 Remoção de Dados</li>
-            <li>🔍 Monitoramento de Vazamentos</li>
-            <li>📡 Controle Mobile RastroJur</li>
+            <li><strong>💔 Casos Conjugais:</strong> Investigação de traições, abandono e comportamento suspeito.</li>
+            <li><strong>📍 Localização:</strong> Rastreamento digital e análise de rota com autorização.</li>
+            <li><strong>🕵️‍♂️ Golpistas:</strong> Identificação de contatos e perfis suspeitos.</li>
+            <li><strong>🧽 Remoção de Dados:</strong> Exclusão de menções e proteção de imagem digital.</li>
+            <li><strong>🔍 Dados Vazados:</strong> Monitoramento de vazamentos e alertas em tempo real.</li>
+            <li><strong>📡 Controle Mobile:</strong> App exclusivo, oculto e antifraude para rastreio autorizado.</li>
         </ul>
     </section>
 
     <footer>
         <p>&copy; 2025 RastroJur - Unidade de Inteligência</p>
     </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h3>🔒 Acesso Restrito</h3>
+            <p>Área exclusiva para juristas, advogados e integrantes da Factory. Deseja prosseguir com contato técnico autorizado?</p>
+            <a href="https://wa.me/5519990187278" target="_blank" class="cta-button">Falar com especialista</a>
+            <button onclick="closeModal()" class="cta-button">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+    function openModal() {
+        document.getElementById("modal").style.display = "block";
+    }
+    function closeModal() {
+        document.getElementById("modal").style.display = "none";
+    }
+    </script>
 </body>
 </html>
