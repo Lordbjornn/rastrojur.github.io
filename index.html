@@ -2,152 +2,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>RastroJur - Investigação Virtual Profissional</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
-  * {
-    box-sizing: border-box;
-  }
-
-  body, html {
-    margin: 0; padding: 0;
-    height: 100%;
-    font-family: 'Poppins', sans-serif;
-    color: #eee;
-  }
-
-  body {
-    background: url('https://images.unsplash.com/photo-1533681700701-40fef7cc3e42?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
-    background-size: cover;
-    position: relative;
-  }
-
-  /* Overlay escuro para melhorar a leitura */
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.75);
-    z-index: 0;
-  }
-
-  main {
-    position: relative;
-    z-index: 1;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 3rem 1.5rem;
-  }
-
-  h1 {
-    font-weight: 700;
-    font-size: 2.8rem;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-
-  h2 {
-    font-weight: 700;
-    font-size: 1.8rem;
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #00b894;
-    padding-bottom: 0.3rem;
-  }
-
-  p, li {
-    font-weight: 400;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-
-  ul {
-    list-style: inside disc;
-    margin-left: 0;
-    padding-left: 0;
-  }
-
-  /* Botão WhatsApp fixo no canto inferior direito */
-  .whatsapp-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
-    color: white;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    z-index: 100;
-  }
-
-  .whatsapp-btn:hover {
-    background-color: #128c4a;
-  }
-
-  .whatsapp-btn svg {
-    width: 32px;
-    height: 32px;
-    fill: white;
-  }
-
-  /* Responsividade */
-  @media(max-width: 600px) {
-    h1 {
-      font-size: 2rem;
-    }
-    h2 {
-      font-size: 1.4rem;
-    }
-    p, li {
-      font-size: 1rem;
-    }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RastroJur - Inteligência e Auditoria Mobile</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <h1>RastroJur — Seu parceiro em investigações virtuais confiáveis e sigilosas</h1>
+    <header class="hero">
+        <div class="terminal-text">
+            <p>> INICIANDO RASTREAMENTO...</p>
+            <p>> COLETANDO DADOS SIGILOSOS...</p>
+            <p>> ACESSO CONCEDIDO</p>
+        </div>
+        <a href="https://wa.me/5519990187278" class="cta-button">ACESSAR TERMINAL</a>
+    </header>
 
-    <p>Nos dias de hoje, a informação é o recurso mais valioso. Seja para proteger sua família, seu negócio ou seus interesses pessoais, contar com um <strong>investigador virtual especializado</strong> faz toda a diferença. Na RastroJur, utilizamos tecnologia avançada e técnicas éticas para oferecer resultados rápidos, seguros e precisos.</p>
+    <section class="sobre">
+        <h2>Sobre a RastroJur</h2>
+        <p>Somos uma unidade de inteligência digital especializada em auditoria mobile, investigação legal e coleta de dados sigilosos com base técnica e autorização.</p>
+    </section>
 
-    <h2>Por que contratar um Investigador Virtual?</h2>
-    <p>O investigador virtual atua de forma remota, utilizando ferramentas digitais para coletar e analisar dados relevantes ao seu caso. Diferente da investigação presencial tradicional, esse serviço é mais ágil, econômico e discreto — ideal para demandas que precisam de sigilo absoluto e eficiência.</p>
+    <section class="servicos">
+        <h2>Serviços</h2>
+        <ul>
+            <li>🧠 Investigação para Juristas</li>
+            <li>💔 Casos Conjugais</li>
+            <li>📍 Localização de Pessoas</li>
+            <li>🕵️‍♂️ Identificação de Golpistas</li>
+            <li>🧽 Remoção de Dados</li>
+            <li>🔍 Monitoramento de Vazamentos</li>
+            <li>📡 Controle Mobile RastroJur</li>
+        </ul>
+    </section>
 
-    <h2>O que fazemos para você?</h2>
-    <ul>
-      <li><strong>Monitoramento digital:</strong> acompanhamento de perfis, redes sociais e dados disponíveis online, sempre respeitando a legislação vigente.</li>
-      <li><strong>Rastreamento de pessoas e informações:</strong> localização, checagem de antecedentes e verificação de dados.</li>
-      <li><strong>Investigações conjugais e pessoais:</strong> confirmação de suspeitas, identificação de possíveis fraudes ou comportamentos suspeitos.</li>
-      <li><strong>Auditorias e investigações corporativas:</strong> prevenção e combate a fraudes internas e externas que possam prejudicar seu negócio.</li>
-      <li><strong>Relatórios detalhados:</strong> fornecemos documentos claros e completos para que você tome decisões com segurança.</li>
-    </ul>
-
-    <h2>Benefícios de escolher a RastroJur</h2>
-    <ul>
-      <li><strong>Discrição e sigilo absoluto:</strong> seu caso tratado com máxima confidencialidade.</li>
-      <li><strong>Tecnologia de ponta:</strong> acesso a ferramentas modernas e profissionais altamente qualificados.</li>
-      <li><strong>Rapidez e economia:</strong> resultados eficazes, sem deslocamentos ou custos excessivos.</li>
-      <li><strong>Atendimento personalizado:</strong> soluções sob medida para cada cliente e situação.</li>
-    </ul>
-
-    <h2>Entre em contato agora mesmo</h2>
-    <p>Está com dúvidas? Precisa de ajuda? <strong><a href="https://wa.me/5511999999999" target="_blank" rel="noopener" style="color:#00b894; text-decoration:none;">Clique aqui para falar pelo WhatsApp</a></strong> e tire todas as suas perguntas de forma rápida e prática.</p>
-  </main>
-
-  <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="whatsapp-btn" aria-label="WhatsApp RastroJur">
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M20.52 3.48A11.854 11.854 0 0012 0C5.373 0 0 5.373 0 12c0 2.116.556 4.164 1.607 5.973L0 24l6.302-1.605A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12a11.855 11.855 0 00-3.48-8.52zm-8.54 17.5a9.366 9.366 0 01-5.012-1.458l-.361-.22-3.739 1.017 1-3.645-.23-.373a9.349 9.349 0 01-1.457-5.013c0-5.156 4.19-9.347 9.348-9.347 2.496 0 4.837.974 6.598 2.741a9.275 9.275 0 012.75 6.6c0 5.156-4.19 9.347-9.348 9.347zm5.163-7.083c-.282-.14-1.67-.823-1.928-.916-.258-.092-.446-.14-.634.14-.188.28-.726.915-.89 1.104-.164.188-.327.21-.609.07-.282-.14-1.192-.44-2.27-1.4-.839-.748-1.404-1.672-1.57-1.952-.164-.28-.018-.43.123-.57.127-.126.282-.327.423-.49.14-.164.188-.28.282-.466.094-.188.047-.35-.023-.49-.07-.14-.634-1.527-.868-2.088-.23-.547-.464-.474-.634-.483-.164-.007-.35-.008-.535-.008a1.146 1.146 0 00-.82.39c-.282.28-1.08 1.053-1.08 2.563 0 1.51 1.105 2.972 1.26 3.177.164.21 2.175 3.32 5.267 4.654.736.318 1.31.507 1.757.65.738.23 1.41.198 1.94.12.592-.086 1.67-.68 1.907-1.337.235-.658.235-1.223.164-1.337-.07-.11-.258-.18-.54-.317z"/>
-    </svg>
-  </a>
+    <footer>
+        <p>&copy; 2025 RastroJur - Unidade de Inteligência</p>
+    </footer>
 </body>
 </html>
