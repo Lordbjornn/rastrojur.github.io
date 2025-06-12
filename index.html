@@ -3,57 +3,135 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RastroJur | Inteligência Mobile</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RastroJur — Inteligência Investigativa Digital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: 100%;
+      font-family: 'Share Tech Mono', monospace;
+      background: url('https://images.unsplash.com/photo-1631721062790-f42197ed4c37?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed;
+      background-size: cover;
+      color: #00ff99;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 0;
+    }
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 960px;
+      margin: auto;
+      padding: 3rem 1rem;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #00ff99;
+    }
+    p, li {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 1rem 0;
+    }
+    section {
+      margin-top: 2rem;
+    }
+    .service {
+      cursor: pointer;
+      padding: 1rem;
+      border: 1px solid #00ff99;
+      margin-bottom: 0.5rem;
+      background: rgba(0, 255, 153, 0.05);
+      transition: background 0.3s;
+    }
+    .service:hover {
+      background: rgba(0, 255, 153, 0.1);
+    }
+    .description {
+      display: none;
+      padding: 1rem;
+      border-left: 4px solid #00ff99;
+      margin-bottom: 1.5rem;
+      background: rgba(0, 255, 153, 0.03);
+    }
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      cursor: pointer;
+      z-index: 10;
+    }
+    .whatsapp-btn:hover { background-color: #128c4a; }
+    .whatsapp-btn svg { width: 32px; height: 32px; fill: white; }
+    @media(max-width: 600px) {
+      h1 { font-size: 1.8rem; }
+    }
+  </style>
 </head>
 <body>
-  <div class="hero">
-    <div class="overlay">
-      <h1 class="glitch" data-text="RastroJur">RastroJur</h1>
-      <p class="subtext">Inteligência e Auditoria Mobile</p>
-      <button onclick="document.getElementById('juristasModal').style.display='block'">Acesso Exclusivo Juristas/Factory</button>
-      <button onclick="document.getElementById('catalogo').scrollIntoView()">Catálogo Completo</button>
-    </div>
-  </div>
+  <main>
+    <h1>RASTROJUR</h1>
+    <p style="text-align:center;">Inteligência Investigativa Digital — Monitoramento. Rastreamento. Precisão.</p>
 
-  <div id="catalogo" class="catalogo">
-    <h2>📁 Catálogo de Serviços</h2>
-    <div class="servico">
-      <h3>📌 Localização de Pessoas e Aparelhos</h3>
-      <p>Rastreamento digital e análise de rota com autorização</p>
-    </div>
-    <div class="servico">
-      <h3>🕵️‍♂️ Identificação de Golpistas</h3>
-      <p>Rastreamento e identificação de estelionatários digitais</p>
-    </div>
-    <div class="servico">
-      <h3>🧽 Remoção de Dados da Internet</h3>
-      <p>Exclusão de dados pessoais expostos em sites e redes sociais</p>
-    </div>
-    <div class="servico">
-      <h3>🔍 Monitoramento de Vazamentos</h3>
-      <p>Verificação de CPF, telefone e e-mail em vazamentos</p>
-    </div>
-    <div class="servico">
-      <h3>📡 Controle Mobile RastroJur</h3>
-      <p>Aplicativo oculto e antifraude com painel de rastreamento</p>
-    </div>
-  </div>
+    <section>
+      <h2>Quem Somos</h2>
+      <p>A RastroJur atua com investigação virtual, monitoramento e análise de dados para clientes que exigem discrição, agilidade e resultados. Aplicamos tecnologia de ponta e inteligência analítica para oferecer serviços digitais de alta precisão.</p>
+    </section>
 
-  <div id="juristasModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="document.getElementById('juristasModal').style.display='none'">&times;</span>
-      <h2>Acesso Exclusivo</h2>
-      <p>Área reservada para juristas e parceiros credenciados.</p>
-      <a href="https://wa.me/5519990187278" target="_blank">Entrar em Contato via WhatsApp</a>
-    </div>
-  </div>
+    <section>
+      <h2>Serviços</h2>
+
+      <div class="service" onclick="toggleDescription('desc1')">Rastreamento de Atividades</div>
+      <div class="description" id="desc1">Identificamos padrões de comportamento, monitoramos interações online e rastreamos ações em tempo real através de fontes abertas e cruzamento de dados.</div>
+
+      <div class="service" onclick="toggleDescription('desc2')">Localização e Descoberta de Dados</div>
+      <div class="description" id="desc2">Localizamos pessoas, dispositivos e informações com base em rastros digitais, utilizando recursos públicos, redes e tecnologia OSINT.</div>
+
+      <div class="service" onclick="toggleDescription('desc3')">Investigações Conjugais Digitais</div>
+      <div class="description" id="desc3">Atuamos com total sigilo para verificar suspeitas, identificar traições e documentar provas digitais com discrição e ética.</div>
+
+      <div class="service" onclick="toggleDescription('desc4')">Análise de Dados e Auditoria Remota</div>
+      <div class="description" id="desc4">Realizamos varreduras digitais e análise técnica para identificar fraudes, acessos não autorizados e inconformidades em ambientes online.</div>
+
+      <div class="service" onclick="toggleDescription('desc5')">Monitoramento de Dados Vazados</div>
+      <div class="description" id="desc5">Monitoramos bases clandestinas e fontes abertas para detectar se seus dados ou de sua empresa foram comprometidos ou divulgados ilegalmente.</div>
+    </section>
+
+    <section>
+      <h2>Contato</h2>
+      <p>Você não precisa de sorte. Você precisa da verdade.<br/>
+         <a href="https://wa.me/5511999999999" target="_blank" style="color:#00ff99;">Clique aqui para falar com um especialista.</a>
+      </p>
+    </section>
+  </main>
+
+  <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-btn" aria-label="WhatsApp RastroJur">
+    <svg viewBox="0 0 24 24"><path d="M20.52 3.48A11.854 11.854 0 0012 0C5.373 0 0 5.373 0 12c0 2.116.556 4.164 1.607 5.973L0 24l6.302-1.605A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12a11.855 11.855 0 00-3.48-8.52zM12 21.48a9.366 9.366 0 01-5.012-1.458l-.361-.22-3.739 1.017 1-3.645-.23-.373a9.349 9.349 0 01-1.457-5.013c0-5.156 4.19-9.347 9.348-9.347 2.496 0 4.837.974 6.598 2.741a9.275 9.275 0 012.75 6.6c0 5.156-4.19 9.347-9.348 9.347z"/></svg>
+  </a>
 
   <script>
-    setInterval(() => {
-      document.querySelector('.glitch').classList.toggle('active');
-    }, 3000);
+    function toggleDescription(id) {
+      const all = document.querySelectorAll('.description');
+      all.forEach(el => { if (el.id !== id) el.style.display = 'none'; });
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
   </script>
 </body>
 </html>
